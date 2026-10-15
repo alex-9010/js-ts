@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    line-height: 2;
+  }
+</style>
+
+<body></body>
+<script>
+  //1.Вводимо необхідні дані
+  const a = parseFloat(prompt("Введіть a", "0"));
+  const b = parseFloat(prompt("Введіть b", "0"));
+  const c = parseFloat(prompt("Введіть c", "0"));
+
+  //2.Знаходимо результат
+  const s1 = a + 12 + b;
+  const s2 = Math.sqrt((a + b) / (2 * a));
+  const s3 = Math.cbrt((a + b) * c);
+  const s4 = Math.sin(a / -b);
+
+  //3.Виводимо результат
+  document.write(`
+        S1 = ${s1} <br>
+        S2 = ${s2} <br>
+        S3 = ${s3} <br>
+        S4 = ${s4}
+      `);
+</script>
+
+</html>

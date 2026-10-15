@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      line-height: 1.2;
+    }
+  </style>
+  <body></body>
+  <script>
+    /*Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).*/
+
+    //1.Обчислюємо
+    const monthNum = Math.floor(Math.random() * 12 + 1);
+    const dayNum = Math.floor(Math.random() * 7);
+    const total = monthNum + dayNum;
+
+    //2.Виводимо результат
+    document.write(`
+    <p>Випадковий номер місяця: ${monthNum}</p>
+    <p>Випадковий номер дня: ${dayNum}</p>
+    <p>Сума: ${total}</p>
+    `);
+  </script>
+</html>

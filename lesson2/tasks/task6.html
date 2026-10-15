@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      line-height: 1.2;
+    }
+    table,
+    tr,
+    td {
+      border: 1px solid #000;
+    }
+    td {
+      padding: 0 2rem;
+    }
+  </style>
+  <body></body>
+  <script>
+    // З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+
+    //1.Вводимо необхідні дані
+    const priceOfBread = parseFloat(prompt("Введіть ціну хліба", "0"));
+    const amountOfBread = parseInt(prompt("Введіть кількість хліба", "0"));
+
+    const priceOfMilk = parseFloat(prompt("Введіть ціну молока", "0"));
+    const amountOfMilk = parseInt(prompt("Введіть кількість молока", "0"));
+
+    const priceOfButter = parseFloat(prompt("Введіть ціну масла", "0"));
+    const amountOfButter = parseInt(prompt("Введіть кількість масла", "0"));
+
+    //2.Знаходимо результат
+    const totalBread = priceOfBread * amountOfBread;
+    const totalMilk = priceOfMilk * amountOfMilk;
+    const totalButter = priceOfButter * amountOfButter;
+
+    const totalPrice = totalBread + totalMilk + totalButter;
+
+    //3.Виводимо результат
+    document.write(`
+    
+    <table>
+      <tr>
+        <td></td>
+        <td>Ціна</td>
+        <td>К-ть</td>
+        <td>Сума</td>
+      </tr>
+      <tr>
+        <td>Хліб</td>
+        <td>${priceOfBread}</td>
+        <td>${amountOfBread}</td>
+        <td>${totalBread.toFixed(2)}</td>
+      </tr>
+      <tr>
+        <td>Молоко</td>
+        <td>${priceOfMilk}</td>
+        <td>${amountOfMilk}</td>
+        <td>${totalMilk.toFixed(2)}</td>
+      </tr>
+      <tr>
+        <td>Масло</td>
+        <td>${priceOfButter}</td>
+        <td>${amountOfButter}</td>
+        <td>${totalButter.toFixed(2)}</td>
+      </tr>
+      <tr>
+        <td colspan="3">Разом:</td>
+        <td>${totalPrice.toFixed(2)}</td>
+      </tr>
+    </table>`);
+  </script>
+</html>

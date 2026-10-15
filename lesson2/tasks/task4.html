@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      line-height: 1.2;
+    }
+  </style>
+  <body></body>
+  <script>
+    /*Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.*/
+
+    //1.Вводимо дані
+    const lengthСentimeters = parseFloat(
+      prompt("Введіть довжину в сантиметрах", "0")
+    );
+
+    //2.Знаходимо результат
+    const lengthMeters = lengthСentimeters / 100;
+    const lengthKilometers = lengthСentimeters / 100000;
+
+    //3.Виводимо результат
+    document.write(`
+    <p>Довжина в метрах: ${lengthMeters}м</p>
+    <p>Довжина в кілометрах: ${lengthKilometers}км</p>
+    `);
+  </script>
+</html>

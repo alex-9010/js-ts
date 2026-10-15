@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      line-height: 1.2;
+    }
+    table,
+    tr,
+    td {
+      border: 1px solid #000;
+    }
+    td {
+      padding: 0 2rem;
+    }
+  </style>
+  <body></body>
+  <script>
+    //1.Вводимо необхідні дані
+    const num1 = parseFloat(prompt("Введіть перше дійсне число", "0"));
+    const num2 = parseFloat(prompt("Введіть друге дійсне число", "0"));
+
+    //2.Знаходимо результат
+    const sumOfNumbers = num1 + num2;
+    const productOfNumbers = num1 * num2;
+    const fractionOfNumbers = num1 / num2;
+
+    //3.Виводимо результат
+    document.write(`
+    <p>Перше число = ${num1}<br> Друге число = ${num2}</p>
+    <table>
+      <tr>
+        <td>Сума</td>
+        <td>${sumOfNumbers}</td>
+      </tr>
+      <tr>
+        <td>Добуток</td>
+        <td>${productOfNumbers}</td>
+      </tr>
+      <tr>
+        <td>Частка</td>
+        <td>${fractionOfNumbers}</td>
+      </tr>
+    </table>`);
+  </script>
+</html>

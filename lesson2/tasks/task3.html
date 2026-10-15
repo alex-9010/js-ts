@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      line-height: 1.2;
+    }
+  </style>
+  <body></body>
+  <script>
+    /*Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).*/
+
+    //1.Вводимо дані
+    const costOfGoods = parseFloat(prompt("Введіть ціну товару", "0"));
+    const amountOfGoods = parseInt(prompt("Введіть кількість товару", "0"));
+
+    //2.Знаходимо результат
+    const totalPrice = costOfGoods * amountOfGoods;
+    const vatPercentage = 5 / 100;
+    const totalVat = totalPrice * vatPercentage;
+
+    //3.Виводимо результат
+    document.write(`
+    <p>Загальна вартість: ${totalPrice}</p>
+    <p>ПДВ: ${totalVat}</p>
+    `);
+  </script>
+</html>

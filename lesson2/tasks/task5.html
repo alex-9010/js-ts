@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/script.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    line-height: 1.2;
+  }
+</style>
+
+<body></body>
+<script>
+  /*Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.*/
+
+  //1.Вводимо дані
+  const seconds = parseInt(prompt("Введіть кількість секунд", "0"));
+
+  //2.Знаходимо результат
+  const amountOfMinutes = seconds / 60;
+  const amountOfHours = amountOfMinutes / 60;
+  const remainingSeconds = seconds % 60
+  const remainingMinutes = amountOfMinutes % 60
+
+  //3.Виводимо результат
+  document.write(`
+    <p>Минуло годин: ${Math.floor(amountOfHours)}</p>
+    <p>Минуло хвилин: ${Math.floor(amountOfMinutes)}</p>
+    <p>Минуло всого часу: ${Math.floor(amountOfHours)}год ${Math.floor(remainingMinutes)}хв ${Math.floor(remainingSeconds)}сек</p>
+    `);
+</script>
+
+</html>

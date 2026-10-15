@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js"></script>
+    <title>Document</title></head
+  ><style>
+    body {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      line-height: 1.2;
+    }
+  </style>
+  <body></body>
+  <script>
+    /* Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років. */
+
+    //1.Вводимо рік народження
+    const yearOfBirth = parseInt(prompt("Введіть рік народження", "0"));
+
+    //2.Знаходимо результат
+    const currentYear = new Date().getFullYear();
+    const numberOfYears = currentYear - yearOfBirth;
+
+    //3.Виводимо результат
+    document.write(`
+    <p>Кількість років: ${numberOfYears}</p>
+    `);
+  </script>
+</html>
