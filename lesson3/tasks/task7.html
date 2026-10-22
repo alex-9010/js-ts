@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    line-height: 1.2;
+  }
+</style>
+
+<body></body>
+<script>
+  /* З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься */
+
+  //1.Вводимо дані
+  const userNumber = parseInt(prompt("Введіть номер місяця (1-12)", "0"));
+
+  //2.Знаходимо і виводимо результат
+  switch (userNumber) {
+    case 12:
+    case 1:
+    case 2:
+      document.write(`<p>Зима</p>`);
+      break;
+    case 3:
+    case 4:
+    case 5:
+      document.write(`<p>Весна</p>`);
+      break;
+    case 6:
+    case 7:
+    case 8:
+      document.write(`<p>Літо</p>`);
+      break;
+    case 9:
+    case 10:
+    case 11:
+      document.write(`<p>Осінь</p>`);
+      break;
+    default:
+      document.write(`<p>Ви ввели не правильне число</p>`);
+      break;
+  }
+</script>
+
+</html>

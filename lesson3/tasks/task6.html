@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    line-height: 1.2;
+  }
+</style>
+
+<body></body>
+<script>
+  /* З клавіатури вводиться номер дня тижня. Вивести на екран назву дня. */
+
+  //1.Вводимо дані
+  const userNumber = parseInt(prompt("Введіть номер дня тижня (1-7)", "0"));
+
+  //2.Знаходимо і виводимо результат
+  switch (userNumber) {
+    case 1:
+      document.write(`<p>Понеділок</p>`);
+      break;
+    case 2:
+      document.write(`<p>Вівторок</p>`);
+      break;
+    case 3:
+      document.write(`<p>Середа</p>`);
+      break;
+    case 4:
+      document.write(`<p>Четвер</p>`);
+      break;
+    case 5:
+      document.write(`<p>П'ятниця</p>`);
+      break;
+    case 6:
+      document.write(`<p>Субота</p>`);
+      break;
+    case 7:
+      document.write(`<p>Неділя</p>`);
+      break;
+    default:
+      document.write(`<p>Ви ввели не правильне число</p>`);
+      break;
+  }
+</script>
+
+</html>

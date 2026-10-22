@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      line-height: 1.2;
+    }
+  </style>
+
+  <body></body>
+  <script>
+    /*З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером).*/
+
+    //1.Вводимо дані
+    const manAge = parseInt(prompt("Введіть скільки років людині", "0"));
+
+    //2.Знаходимо і виводимо результат
+    const maxBabyAge = 2;
+    const maxChildAge = 5;
+    const maxSchoolboyAge = 17;
+    const maxStudentAge = 25;
+    const maxWorkerAge = 65;
+    if (manAge <= maxBabyAge)
+      document.write(`
+    <p>Він є дитиною</p>
+    `);
+    else if (manAge <= maxChildAge)
+      document.write(`
+    <p>Він є дитиною у садочку</p>
+    `);
+    else if (manAge <= maxSchoolboyAge)
+      document.write(`
+    <p>Він є школярем</p>
+    `);
+    else if (manAge <= maxStudentAge)
+      document.write(`
+    <p>Він є студентом</p>
+    `);
+    else if (manAge <= maxWorkerAge)
+      document.write(`
+    <p>Він є працівником</p>
+    `);
+    else
+      document.write(`
+    <p>Він є пенсіонером</p>
+    `);
+  </script>
+</html>

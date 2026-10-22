@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    line-height: 1.2;
+  }
+</style>
+
+<body></body>
+<script>
+  // З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+
+  //1.Вводимо необхідні дані
+  const priceOfGoods = parseFloat(prompt("Введіть ціну товару", "0"));
+  const amountOfMoney = parseFloat(prompt("Введіть кількість грошей", "0"));
+  const priceOfLotteryTicket = 4;
+  //2.Знаходимо і виводимо результат
+  if (priceOfGoods > amountOfMoney)
+    document.write(`<p>Вам відмовлено у покупці</p>`);
+  else if (priceOfGoods + priceOfLotteryTicket <= amountOfMoney)
+    document.write(`<p>Хочете ще лотерею за 4грн?</p>`);
+  else document.write(`<p>Грошей на товар вистачає</p>`);
+</script>
+
+</html>
