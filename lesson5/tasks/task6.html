@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 6</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+      table,
+      tr,
+      td {
+        border: 1px solid #000;
+      }
+      table {
+        display: inline-block;
+        margin-right: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+  <script>
+    // Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком
+
+    let num = 1;
+    const maxTables = 3;
+    const maxRows = 3;
+    const maxColumns = 3;
+    for (let k = 0; k < maxTables; k++) {
+      document.write(`<table>`);
+      for (let j = 0; j < maxRows; j++) {
+        document.write(`<tr>`);
+        for (let i = 0; i < maxColumns; i++) {
+          document.write(`<td>${num}</td>`);
+          num++;
+        }
+        document.write(`</tr>`);
+      }
+      document.write(`</table>`);
+    }
+  </script>
+  </body>
+</html>

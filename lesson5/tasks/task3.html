@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+      table,
+      tr,
+      td {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+  <script>
+    // Вивести таблицю з одним рядком і  7 стовпцями.
+
+    const maxColumns = 7;
+    document.write(`<table><tr>`);
+    for (let i = 1; i <= maxColumns; i++) {
+      document.write(`<td>${i}</td>`);
+    }
+    document.write(`</tr></table>`);
+  </script>
+  </body>
+</html>

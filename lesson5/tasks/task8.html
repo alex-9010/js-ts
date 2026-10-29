@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 8</title>
+    <style></style>
+  </head>
+  <body>
+  <script>
+    // Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число користувача (використати confirm).
+
+    const maxRange = parseInt(
+      prompt(`Задайте максимальне число діапазону`, 10)
+    );
+    for (let i = 1; i <= 3; i++) {
+      let randomNum = Math.floor(Math.random() * maxRange + 1);
+      let correctAnswer = confirm(`${i} спроба. Це число ${randomNum}?`);
+      if (correctAnswer === true) {
+        document.write(`<h1>Комп’ютер вгадав число</h1>`);
+        break;
+      } else if (i === 3) {
+        document.write(`<h1>Комп’ютер не вгадав число</h1>`);
+        break;
+      }
+    }
+  </script>
+  </body>
+</html>

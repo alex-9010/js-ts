@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача -1</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Вивести на екран номери місяців весни і літа (від 3 до 8)
+
+      //1.Вводимо необхідні дані
+      const firstMonth = 3;
+      const lastMonth = 8;
+
+      //2.Виводимо результат
+      document.write(`<ul>`);
+      for (let month = firstMonth; month <= lastMonth; month++) {
+        document.write(`<li>${month}</li>`);
+      }
+      document.write(`</ul>`);
+    </script>
+  </body>
+</html>
