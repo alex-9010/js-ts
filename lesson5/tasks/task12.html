@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 12</title>
+  </head>
+  <style>
+    body {
+      font-size: 10rem;
+      display: inline-block;
+    }
+    h1 {
+      font-size: 5rem;
+      display: block;
+    }
+  </style>
+  <body></body>
+  <script>
+    //  Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору зображення за номером).
+    if (confirm("Почати тестування?")) {
+      let sumWatermelon = 0;
+      let sumLemon = 0;
+      let sumBanana = 0;
+      let sumApple = 0;
+      for (let i = 0; i < 3; i++) {
+        let randomNum = Math.floor(Math.random() * 4);
+        switch (randomNum) {
+          case 0:
+            document.write(`🍉`);
+            sumWatermelon++;
+            break;
+          case 1:
+            document.write(`🍋`);
+            sumLemon++;
+            break;
+          case 2:
+            document.write(`🍌`);
+            sumBanana++;
+            break;
+          case 3:
+            document.write(`🍏`);
+            sumApple++;
+            break;
+        }
+      }
+      if (sumWatermelon === 3) document.write(`<h1>Ви виграли 100грн</h1>`);
+      else if (sumLemon === 3) {
+        document.write(`<h1>Ви виграли 200грн</h1>`);
+      } else if (sumBanana === 3) {
+        document.write(`<h1>Ви виграли 500грн</h1>`);
+      } else if (sumApple === 3) {
+        document.write(`<h1>Ви виграли 1000грн</h1>`);
+      }
+    }
+  </script>
+</html>

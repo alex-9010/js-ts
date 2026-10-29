@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 15</title>
+  </head>
+  <style></style>
+  <body></body>
+  <script>
+    // Користувач поступово вводить показники температури протягом року. Знайти середню температуру.
+    if (confirm("Почати тестування?")) {
+      let yearTemp = 0;
+      const numMonths = 12;
+      for (let i = 1; i <= numMonths; i++) {
+        let monthTemp = parseInt(prompt(`Введіть середню температуру за ${i} місяць`));
+        yearTemp += monthTemp;
+      }
+      document.write(`<h1>Середня річна температура = ${(yearTemp /= numMonths)}</h1>`);
+    }
+  </script>
+</html>

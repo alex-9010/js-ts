@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 14</title>
+  </head>
+  <style></style>
+  <body></body>
+  <script>
+    // Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до тих пір, поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно ввести).
+    if (confirm("Почати тестування?")) {
+      let priceProduct = 1000;
+      do {
+        let userPayments = parseInt(prompt(`Ви винні ${priceProduct}грн. Введіть суму платежу`));
+        priceProduct -= userPayments;
+      } while (priceProduct > 0);
+      {
+        document.write(`<h1>Дякуємо за покупку! Приходьте ще :)</h1>`);
+      }
+    }
+  </script>
+</html>
