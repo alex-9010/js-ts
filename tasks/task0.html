@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 0</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Вивести на екран
+      // A B C D E
+      // B C D E F
+      // C D E F G
+      // D E F G H
+      // E F G H I
+      if (confirm("Почати тестування?")) {
+        //1.Вводимо необхідні дані
+        const firstLetter = 65;
+        const sizeRow = 5;
+
+        //2.Виводимо результат
+        for (let row = 0; row < sizeRow; row++) {
+          for (let col = 0; col < sizeRow; col++) {
+            document.write(`&#${firstLetter + row + col}; `);
+          }
+          document.write(`<br>`);
+        }
+      }
+    </script>
+  </body>
+</html>
