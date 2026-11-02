@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 7</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Інвестор вклав S тис. грн на 20 років під 20% річних, а потім на 17 років під 27% річних. Визначити за допомогою циклів суму, яку він одержить.
+
+      //1.Вводимо необхідні дані
+      const maxYears20 = 20;
+      const maxYears17 = 17;
+      let capital = parseInt(prompt("Введіть скільки тис. грн вклав інвестор", "1")) * 1000;
+
+      //2.Обчислюємо
+      for (let numYear = 1; numYear <= maxYears20; numYear++) {
+        capital = capital + (capital * 20) / 100;
+      }
+      for (let numYear = 1; numYear <= maxYears17; numYear++) {
+        capital = capital + (capital * 27) / 100;
+      }
+
+      //3.Виводимо результат
+      document.write(`<h3>Інвестор отримає ${capital.toFixed(2)} грн через 37 років</h3>`);
+    </script>
+  </body>
+</html>
