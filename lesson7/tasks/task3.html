@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Створити окремі функції, які для 4 чисел знаходять: 1) суму; 2) добуток; 3) середнє арифметичне; 4) мінімальне значення.
+
+      if (confirm("Почати тестування?")) {
+        //1.Вводимо необхідні дані
+        const number1 = parseFloat(prompt(`Введіть перше число`, "0"));
+        const number2 = parseFloat(prompt(`Введіть друге число`, "0"));
+        const number3 = parseFloat(prompt(`Введіть третє число`, "0"));
+        const number4 = parseFloat(prompt(`Введіть четверте число`, "0"));
+        //2. Обчислюємо і виводимо результат
+        function getSum(a, b, c, d) {
+          return a + b + c + d;
+        }
+        function getProduct(a, b, c, d) {
+          return a * b * c * d;
+        }
+        function getAverage(a, b, c, d) {
+          return (a + b + c + d) / 4;
+        }
+        function getMin(a, b, c, d) {
+          let min = a;
+
+          if (b < min) min = b;
+          if (c < min) min = c;
+          if (d < min) min = d;
+
+          return min;
+        }
+        document.write(` 
+        сума: ${getSum(number1, number2, number3, number4)}<br> 
+        добуток: ${getProduct(number1, number2, number3, number4)}<br>  
+        середнє арифметичне: ${getAverage(number1, number2, number3, number4)}<br>
+        мінімальне значення: ${getMin(number1, number2, number3, number4)}
+        `);
+      }
+    </script>
+  </body>
+</html>

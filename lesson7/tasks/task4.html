@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 4</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість додатних, кількість більших за 100.
+      if (confirm("Почати тестування?")) {
+        function getAmount(num1, num2, num3) {
+          let numOfEven = 0;
+          let numOfPositive = 0;
+          let numGreater100 = 0;
+
+          if (num1 % 2 === 0) numOfEven++;
+          if (num2 % 2 === 0) numOfEven++;
+          if (num3 % 2 === 0) numOfEven++;
+
+          if (num1 > 0) numOfPositive++;
+          if (num2 > 0) numOfPositive++;
+          if (num3 > 0) numOfPositive++;
+
+          if (num1 > 100) numGreater100++;
+          if (num2 > 100) numGreater100++;
+          if (num3 > 100) numGreater100++;
+
+          return `
+          <p>кількість парних = ${numOfEven}</p>
+          <p>кількість додатних = ${numOfPositive}</p>
+          <p>кількість більших за 100 = ${numGreater100}</p>
+          `;
+        }
+
+        //1.Вводимо необхідні дані
+        const num1 = parseInt(prompt("Введіть перше число", "0"));
+        const num2 = parseInt(prompt("Введіть друге число", "0"));
+        const num3 = parseInt(prompt("Введіть третє число", "0"));
+
+        //2. Обчислюємо і виводимо результат
+        const result = getAmount(num1, num2, num3);
+        document.write(result);
+      }
+    </script>
+  </body>
+</html>
