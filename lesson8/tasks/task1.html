@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 1</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка)).
+      if (confirm("Почати тестування?")) {
+        //1.Вводимо необхідні дані
+        const subjectsCount = parseInt(prompt(`Введіть к-ть предметів`, "1"));
+        let arrSubjectGrades = new Array(subjectsCount);
+        for (let i = 0; i < arrSubjectGrades.length; i++) {
+          const randNum = 2 + Math.floor(Math.random() * 4);
+          arrSubjectGrades[i] = randNum;
+        }
+
+        //2. Обчислюємо і виводимо результат
+        function getStudentInfo(array) {
+          let averageNum = 0;
+          let minNum = array[0];
+          for (let i = 0; i < array.length; i++) {
+            averageNum += array[i];
+
+            if (minNum > array[i]) minNum = array[i];
+          }
+
+          averageNum /= array.length;
+          let studentCategory;
+          switch (minNum) {
+            case 5:
+              studentCategory = "відмінник";
+              break;
+            case 4:
+              studentCategory = "хорошист";
+              break;
+            case 3:
+              studentCategory = "трійочник";
+              break;
+
+            default:
+              studentCategory = "двійочник";
+          }
+          return `
+          Середній бал = ${averageNum.toFixed(2)} <br>
+          Учень - ${studentCategory}
+          `;
+        }
+        document.write(`<h3>Оцінки: ${arrSubjectGrades}</h3>`, getStudentInfo(arrSubjectGrades));
+      }
+    </script>
+  </body>
+</html>

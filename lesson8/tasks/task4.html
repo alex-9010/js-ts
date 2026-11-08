@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 4</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Дано послідовність номерів автомобілів. Підрахувати кількість номерів, які:
+      // - починаються на букву «А» (для отримання першої літери можна також звернутися до номера авто як string ніби як до масиву за номером 0 - licensePlate[0]-перша літера);
+      // - перша і остання літери співпадають;
+      // - складаються з більше ніш 5 символів;
+      if (confirm("Почати тестування?")) {
+        //1.Вводимо необхідні дані
+        const carLicensePlates = ["AA1234BA", "BC5678KB", "AI0001TT", "KA7777AK", "A123A", "CE4321OP", "AB12", "BH9090XO"];
+
+        // - починаються на букву «А» (для отримання першої літери можна також звернутися до номера авто як string ніби як до масиву за номером 0 - licensePlate[0]-перша літера);
+
+        function getCountStartsWithA(array) {
+          let count = 0;
+          for (let i = 0; i < array.length; i++) {
+            const licensePlate = array[i];
+            if (licensePlate[0] === "A") count++;
+          }
+          return count;
+        }
+        // - перша і остання літери співпадають;
+
+        function getCountFirstLastMatch(array) {
+          let count = 0;
+          for (let i = 0; i < array.length; i++) {
+            const licensePlate = array[i];
+            if (licensePlate[0] === licensePlate[licensePlate.length - 1]) count++;
+          }
+          return count;
+        }
+
+        // - складаються з більше ніж 5 символів;
+        function getCountPlatesLongerThan5(array) {
+          let count = 0;
+          for (let i = 0; i < array.length; i++) {
+            const licensePlate = array[i];
+            if (licensePlate.length > 5) count++;
+          }
+          return count;
+        }
+
+        //2. Обчислюємо і виводимо результат
+        const countStartsWithA = getCountStartsWithA(carLicensePlates);
+        const firstLastLetterMatch = getCountFirstLastMatch(carLicensePlates);
+        const countPlatesLongerThan5 = getCountPlatesLongerThan5(carLicensePlates);
+
+        document.write(`
+        Номери автомобілів: <br>${carLicensePlates}<br>
+        кількість номерів, які починаються на букву «А»: <br>${countStartsWithA}<br>
+        перша і остання літери співпадають: <br>${firstLastLetterMatch}<br>
+        складаються з більше ніж 5 символів: <br>${countPlatesLongerThan5}
+        `);
+      }
+    </script>
+  </body>
+</html>

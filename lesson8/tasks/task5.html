@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 5</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Дано послідовність оцінок учня. Підрахувати кількість:
+      // 1) двійок
+      // 2) кількість хороших оцінок (добре, відмінно);
+      // 3) кількість оцінок, які нижче середнього.
+      if (confirm("Почати тестування?")) {
+        //1.Вводимо необхідні дані
+        const studentGrades = [3, 4, 2, 4, 5, 3, 3];
+        //2. Обчислюємо і виводимо результат
+        function getCountGrades(array) {
+          let countTwos = 0;
+          let countGoodGrades = 0;
+          let countBelowAverage = 0;
+          for (let i = 0; i < array.length; i++) {
+            switch (array[i]) {
+              case 2:
+                countTwos++;
+                countBelowAverage++;
+                break;
+              case 3:
+                countBelowAverage++;
+                break;
+              case 4:
+              case 5:
+                countGoodGrades++;
+            }
+          }
+          return [countTwos, countGoodGrades, countBelowAverage];
+        }
+        const result = getCountGrades(studentGrades);
+        document.write(`
+        Дано послідовність оцінок учня <br> ${studentGrades}<br>
+        Кількість двійок:<br> ${result[0]}<br>
+        Кількість хороших оцінок (добре, відмінно): <br> ${result[1]}<br>
+        Кількість оцінок, які нижче середнього (3, 2): <br> ${result[2]}
+        `);
+      }
+    </script>
+  </body>
+</html>

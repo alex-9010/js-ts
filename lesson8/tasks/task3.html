@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+    <style>
+      body {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».
+      if (confirm("Почати тестування?")) {
+        const arrayNames = ["Віка", "Оля", "Степан", "Іван", "Петро", "Іван"];
+
+        function getAmountNames(array) {
+          let num = 0;
+          for (let i = 0; i < array.length; i++) {
+            if (array[i] === "Іван") num++;
+          }
+          return num;
+        }
+        // Виводимо масив імен учнів
+        document.write(`<p>Iменa учнів: ${arrayNames}</p>`);
+
+        // Виводимо скільки разів зустрічається ім’я «Іван»
+        document.write(`Ім'я "Іван" зустрічається ${getAmountNames(arrayNames)} рази`);
+      }
+    </script>
+  </body>
+</html>
